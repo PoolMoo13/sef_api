@@ -1,0 +1,31 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "amount",
+            "type": "float"
+        },
+        {
+            "name": "area_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "area_id",
+            "references": "id",
+            "on": "areas",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "area",
+            "type": "BelongsTo",
+            "class": "App\\Area"
+        }
+    ]
+}
